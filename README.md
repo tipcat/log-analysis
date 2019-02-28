@@ -17,13 +17,13 @@ _Log Analysis_ runs on a virtual Ubuntu box and utilizes the postgresql implemen
 
 * Assuming you have installed those two components, download and unzip this file: [FSND-Virtual-Machine.zip](https://s3.amazonaws.com/video.udacity-data.com/topher/2018/April/5acfbfa3_fsnd-virtual-machine/fsnd-virtual-machine.zip) or fork and clone the Github [repository](https://github.com/udacity/fullstack-nanodegree-vm). This will give you a Vagrant box preconfigured with the postgresql package.
 
-* Once you've done that, you will need to obtain the actual data file [newsdata.sql](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip). Put the unzipped ``newsdata.sql`` file inside the ``vagrant`` subdirectory of your ``FSND-Virtual-Machine`` folder. This is **also** where you will place the ``log-analysis.p`` file which runs the application.
+* Once you've done that, you will need to obtain the actual data file [newsdata.sql](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip). Put the unzipped ``newsdata.sql`` file inside the ``vagrant`` subdirectory of your ``FSND-Virtual-Machine`` folder. This is **also** where you will place the ``log-analysis.py`` file which runs the application.
 
 ### Prepping the Database
 
-Now it's time to ``vagrant up`` and then ``vagrant ssh`` into your virtual machine. Type ``cd /vagrant`` to access your shared files, which is where ``newsdata.sql`` will be.
+Now it's time to ``vagrant up`` and then ``vagrant ssh`` into your virtual machine. Type ``cd /vagrant`` to access your shared files, which is where ``newsdata.sql`` and ``log-analysis.py`` will be.
 
-Type ``psql -d news -f newsdata.sql`` to create the database tables and populate them with data. You can proceed to explore the database by typing ``psql -d news``. Use ``\dt`` to display the tables and ``\d table`` (replacing "table" with the name of a table) to navigate the table schema. You can also execute SQL commands from the ``news=>>`` prompt. The command will execute only when the ending semicolon ``;`` is reached, so longer queries may be broken up into smaller ones by hitting return.
+Type ``psql -d news -f newsdata.sql`` to create the database tables and populate them with data. You can proceed to explore the database by typing ``psql -d news``. Use ``\dt`` to display the tables and ``\d table`` (replacing "table" with the name of a table) to navigate the table schema. You can also execute SQL commands from the ``news=>>`` prompt. The command will execute only when the ending semicolon ``;`` is reached, so longer queries may be broken up into smaller ones simply by hitting return.
 
 ### Running the Application
 
