@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from __future__ import print_function
 import psycopg2
 
 question1 = "What are the three most popular articles of all time?"
@@ -33,7 +34,7 @@ def print_results(outcome):
     print("\n", outcome[1])
     i = 1
     for results in outcome[0]:
-        print("\t", i, "-", results[0], "-- ", str(results[1]), "hits")
+        print("\t", i, "-", results[0], "--", str(results[1]), "hits")
         i += 1
 
 

@@ -30,6 +30,6 @@ Type ``psql -d news -f newsdata.sql`` to create the database tables and populate
 If you are still in the ``psql news=>`` prompt, type ``^ d`` to escape, which will bring you back to
 the shared directory prompt ``/vagrant$``. You are ready to rock!
 
-This application **must** be run in Python 3 to display the results in a readable format. The code does not rely on SQL views. Simply type ``python3 log-analysis.py`` while in the vagrant directory to run.
+The code does not rely on SQL views. Simply type ``python3 log-analysis.py`` while in the vagrant directory to run. Although written in Python 3, this application will also run in python 2 via ``python log-analysis.py``.
 
 The application will take around 20 seconds to run, so please be patient while waiting for the results!
